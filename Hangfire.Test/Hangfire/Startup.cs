@@ -9,6 +9,11 @@ namespace Hangfire
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            GlobalConfiguration.Configuration
+                .UseSqlServerStorage("Hangfire");
+
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
         }
     }
 }
