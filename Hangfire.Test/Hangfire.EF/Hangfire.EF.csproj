@@ -50,12 +50,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Migrations\201709130201476_Inicial.cs" />
+    <Compile Include="Migrations\201709130201476_Inicial.Designer.cs">
+      <DependentUpon>201709130201476_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709130211017_PessoaEmails.cs" />
+    <Compile Include="Migrations\201709130211017_PessoaEmails.Designer.cs">
+      <DependentUpon>201709130211017_PessoaEmails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709130201476_Inicial.resx">
+      <DependentUpon>201709130201476_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709130211017_PessoaEmails.resx">
+      <DependentUpon>201709130211017_PessoaEmails.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,5 +8,7 @@ namespace Hangfire.EF
         public Context() : base("Hangfire")
         {}
         public DbSet<Pessoa> Pessoa { get; set; }
+        public DbSet<PessoaUsuario> PessoaUsuario { get; set; }
+
     }
 }

@@ -37,7 +37,7 @@ namespace Hangfire.Controllers
         {
             using (var ctx = new Context())
             {
-                System.Threading.Thread.Sleep(10000);
+                System.Threading.Thread.Sleep(millisecondsTimeout: 10000);
                 ctx.Pessoa.Add(new Pessoa { Nome = "BERA" });
                 ctx.SaveChanges();
             }
